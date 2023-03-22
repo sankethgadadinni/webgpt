@@ -41,8 +41,9 @@ def webgpt_result(query : str, number_of_results : int) -> str:
         Result_ += "\"" + result["body"] + "\"" + "\n"
         Result_ += "URL: " + result["href"] + "\n\n"
         
+    prompt_filepath = os.path.join(os.getcwd(), "prompts.txt")
         
-    prompt = open_file(r"C:\Users\SankethSiddannaGadad\Downloads\webgpt\prompt.txt").replace('<<web_results>>', Result_)
+    prompt = open_file(prompt_filepath).replace('<<web_results>>', Result_)
     prompt = prompt.replace("<<query>>", query)
 
     prompt = prompt.encode(encoding='ASCII',errors='ignore').decode()
@@ -66,7 +67,9 @@ def webgpt_results1(query : str, number_of_results : int):
 
     results = str(results)
     
-    prompt = open_file(r"C:\Users\SankethSiddannaGadad\Downloads\webgpt\prompt.txt").replace('<<web_results>>', results)
+    prompt_filepath = os.path.join(os.getcwd(), "prompts.txt")
+    
+    prompt = open_file(prompt_filepath).replace('<<web_results>>', results)
     prompt = prompt.replace("<<query>>", query)
 
     prompt = prompt.encode(encoding='ASCII',errors='ignore').decode()
