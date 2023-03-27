@@ -11,7 +11,7 @@ def main():
     
     query_text = st.text_input("enter the query")
    
-    results = webgpt_results1(query = query_text, number_of_results = 5)
+    results = webgpt_results1(query = query_text, number_of_results = 10)
 
     st.write(results)
     
