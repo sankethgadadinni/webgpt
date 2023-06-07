@@ -48,11 +48,11 @@ def webgpt_result(query : str, number_of_results : int) -> str:
 
     prompt = prompt.encode(encoding='ASCII',errors='ignore').decode()
     
-    openai.api_key = "5e8eb0cc69a14f92b5f9eeec4095a228"
-    openai.api_base =  "https://innovation-ai.openai.azure.com/"
+    openai.api_key = ""
+    openai.api_base =  ""
     openai.api_type = 'azure'
     openai.api_version = '2022-12-01' 
-    deployment_name='text-completion'
+    deployment_name=''
     
     r = openai.Completion.create(engine=deployment_name, prompt=prompt, temperature=0.3, max_tokens=800)
     response_ = r.choices[0]['text']
@@ -74,11 +74,11 @@ def webgpt_results1(query : str, number_of_results : int):
 
     prompt = prompt.encode(encoding='ASCII',errors='ignore').decode()
     
-    openai.api_key = "5e8eb0cc69a14f92b5f9eeec4095a228"
-    openai.api_base =  "https://innovation-ai.openai.azure.com/"
+    openai.api_key = ""
+    openai.api_base =  ""
     openai.api_type = 'azure'
     openai.api_version = '2022-12-01' 
-    deployment_name='text-completion'
+    deployment_name=''
     
     r = openai.Completion.create(engine=deployment_name, prompt=prompt, temperature=0.3, max_tokens=800)
     response_ = r.choices[0]['text']
